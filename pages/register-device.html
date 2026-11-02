@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckSerialNum - Register Device</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="frame">
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <a class="logo" href="../index.html">CheckSerialNum</a>
+      <div class="menu">
+        <a href="../index.html">Home</a>
+        <a class="active" href="register-device.html">Register Device</a>
+        <a href="report-stolen.html">Report Stolen</a>
+        <a href="signin.html">Sign Out</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>Register a new device</h1>
+      <p>Protect your device by linking it to your verified account.</p>
+    </header>
+
+    <main class="content">
+
+      <!-- Register form -->
+      <div class="card">
+        <h2>Device Details</h2>
+        <form action="#">
+          <div class="two-columns">
+            <div>
+              <label for="type">Device Type</label>
+              <select id="type" name="device_type">
+                <option>Phone</option>
+                <option>Tablet</option>
+                <option>Laptop</option>
+              </select>
+            </div>
+            <div>
+              <label for="brand">Brand</label>
+              <input type="text" id="brand" name="brand" placeholder="e.g. Apple, Samsung, Dell" required>
+            </div>
+            <div>
+              <label for="model">Model</label>
+              <input type="text" id="model" name="model" placeholder="e.g. iPhone 13 Pro" required>
+            </div>
+            <div>
+              <label for="serial">Serial Number or IMEI</label>
+              <input type="text" id="serial" name="serial_number" placeholder="8-20 letters or digits" required>
+            </div>
+          </div>
+
+          <label for="receipt">Proof of Ownership (purchase receipt)</label>
+          <input type="file" id="receipt" name="receipt" accept=".pdf,.jpg,.jpeg" required>
+          <p class="hint">PDF or JPG, up to 5 MB.</p>
+
+          <button class="button" type="submit">Register Device</button>
+        </form>
+      </div>
+
+      <!-- (sample data) -->
+      <div class="card">
+        <h2>My Registered Devices</h2>
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>Device</th>
+              <th>Serial No.</th>
+              <th>Status</th>
+              <th>Registered</th>
+            </tr>
+            <tr>
+              <td>iPhone 13 Pro</td>
+              <td class="serial">356789104523871</td>
+              <td><span class="status stolen">Stolen</span></td>
+              <td>28 Oct 2026</td>
+            </tr>
+            <tr>
+              <td>MacBook Air</td>
+              <td class="serial">C02XK1ZJH7</td>
+              <td><span class="status clear">Clear</span></td>
+              <td>28 Oct 2026</td>
+            </tr>
+            <tr>
+              <td>Galaxy Tab S8</td>
+              <td class="serial">R58N91TQ2LM</td>
+              <td><span class="status flagged">Flagged</span></td>
+              <td>28 Oct 2026</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 CheckSerialNum.</span>
+      <span>Register Device (Registered User)</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

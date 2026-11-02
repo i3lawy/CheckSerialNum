@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckSerialNum - Report Stolen</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="frame">
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <a class="logo" href="../index.html">CheckSerialNum</a>
+      <div class="menu">
+        <a href="../index.html">Home</a>
+        <a href="register-device.html">Register Device</a>
+        <a class="active" href="report-stolen.html">Report Stolen</a>
+        <a href="signin.html">Sign Out</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>Report a stolen device</h1>
+      <p>Filing a report immediately flags the serial number across the platform.</p>
+    </header>
+
+    <main class="content">
+
+      <!-- Report form -->
+      <div class="card">
+        <h2>Theft Report</h2>
+        <form action="#">
+          <label for="device">Select Device</label>
+          <select id="device" name="device_id" required>
+            <option>MacBook Air - C02XK1ZJH7</option>
+          </select>
+
+          <div class="two-columns">
+            <div>
+              <label for="date">Date of Theft</label>
+              <input type="date" id="date" name="theft_date" required>
+            </div>
+            <div>
+              <label for="region">Region</label>
+              <select id="region" name="region_id" required>
+                <option>Riyadh Region</option>
+                <option>Makkah Region</option>
+                <option>Eastern Province - Jubail</option>
+                <option>Eastern Province - Dammam</option>
+                <option>Eastern Province - Khobar</option>
+                <option>Madinah Region</option>
+                <option>Asir Region</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="details">Additional Details (optional)</label>
+          <textarea id="details" name="additional_details" rows="4" placeholder="Describe the circumstances of the theft..."></textarea>
+
+          <button class="button red" type="submit">Submit Theft Report</button>
+        </form>
+      </div>
+
+      <!-- (sample data) -->
+      <div class="card">
+        <h2>My Submitted Reports</h2>
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>Report ID</th>
+              <th>Device</th>
+              <th>Region</th>
+              <th>Date Filed</th>
+              <th>Case Status</th>
+            </tr>
+            <tr>
+              <td class="serial">#TR-1042</td>
+              <td>iPhone 13 Pro</td>
+              <td>Riyadh Region</td>
+              <td>28 Oct 2026</td>
+              <td><span class="status flagged">Under Investigation</span></td>
+            </tr>
+            <tr>
+              <td class="serial">#TR-1057</td>
+              <td>Galaxy Tab S8</td>
+              <td>Riyadh Region</td>
+              <td>28 Oct 2026</td>
+              <td><span class="status clear">Recovered</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 CheckSerialNum.</span>
+      <span>Report Stolen Device</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

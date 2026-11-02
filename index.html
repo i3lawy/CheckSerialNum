@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckSerialNum - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="frame">
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <a class="logo" href="index.html">CheckSerialNum</a>
+      <div class="menu">
+        <a class="active" href="index.html">Home</a>
+        <a href="pages/register-device.html">Register Device</a>
+        <a href="pages/report-stolen.html">Report Stolen</a>
+        <a href="pages/signin.html">Sign In</a>
+      </div>
+    </nav>
+
+    <!-- Top section with the serial lookup -->
+    <header class="hero">
+      <h1>Check any serial number <span class="grey-text">before you buy a device.</span></h1>
+      <p>Enter a phone IMEI or a laptop or tablet serial. You will see whether it has been reported stolen.</p>
+
+      <!-- The lookup form.  -->
+      <form class="lookup" action="#">
+        <input type="text" name="serial" placeholder="e.g. 356789104523871" required>
+        <button class="button" type="submit">Check</button>
+      </form>
+
+      <!-- Example result -->
+      <div class="card result">
+        <h3>This device is reported STOLEN</h3>
+        <table>
+          <tr>
+            <th>Device</th>
+            <td>iPhone 13 Pro</td>
+          </tr>
+          <tr>
+            <th>Serial</th>
+            <td class="serial">356789104523871</td>
+          </tr>
+          <tr>
+            <th>Reported</th>
+            <td>28 Oct 2026 | Riyadh Region</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td><span class="status stolen">Stolen</span></td>
+          </tr>
+        </table>
+        <p class="hint">Do not buy this device. Contact the police or the case officer on the report.</p>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- What each status means -->
+      <div class="card">
+        <h2>What the result means</h2>
+        <table>
+          <tr>
+            <td><span class="status clear">Clear</span></td>
+            <td>Registered, no theft report.</td>
+          </tr>
+          <tr>
+            <td><span class="status stolen">Stolen</span></td>
+            <td>Active theft report on file.</td>
+          </tr>
+          <tr>
+            <td><span class="status flagged">Flagged</span></td>
+            <td>Under review by a case officer.</td>
+          </tr>
+          <tr>
+            <td><span class="status grey">Not found</span></td>
+            <td>Serial is not registered yet.</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Three boxes that link to the other pages -->
+      <h2>How it works</h2>
+      <div class="features">
+        <div class="card">
+          <h3>Register a Device</h3>
+          <p>Create an account and add your phone, tablet or laptop with its receipt.</p>
+          <a class="button light" href="pages/register-device.html">Register</a>
+        </div>
+        <div class="card">
+          <h3>Report Stolen</h3>
+          <p>File a theft report and the serial is flagged for everyone at once.</p>
+          <a class="button light" href="pages/report-stolen.html">Report</a>
+        </div>
+        <div class="card">
+          <h3>Case Officer Portal</h3>
+          <p>Officers review reports, update cases and manage the blacklist.</p>
+          <a class="button light" href="pages/officer.html">Open portal</a>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 CheckSerialNum.</span>
+      <span>Home - Serial Lookup</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

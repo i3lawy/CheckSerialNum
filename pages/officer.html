@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckSerialNum - Case Officer Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="frame">
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <a class="logo" href="../index.html">CheckSerialNum <span class="grey-text">| Case Officer Portal</span></a>
+      <div class="menu">
+        <a class="active" href="officer.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+        <a href="signin.html">Sign Out</a>
+      </div>
+    </nav>
+
+    <!-- Page title and Case queue -->
+    <header class="hero">
+      <h1>Theft report case queue</h1>
+      <p>Investigate, assign and update the status of reported devices.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="number red">37</div>
+          <div class="label">Open Cases</div>
+        </div>
+        <div class="stat">
+          <div class="number">12</div>
+          <div class="label">Pending Review</div>
+        </div>
+        <div class="stat">
+          <div class="number">204</div>
+          <div class="label">Resolved (30 days)</div>
+        </div>
+        <div class="stat">
+          <div class="number">1,486</div>
+          <div class="label">Serial Checks Today</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- Case queue -->
+      <div class="card">
+        <h2>Theft Reports</h2>
+
+        <!-- Filters -->
+        <form class="two-columns" action="#">
+          <div>
+            <label for="filter-region">Filter by region</label>
+            <select id="filter-region">
+              <option>All regions</option>
+              <option>Riyadh Region</option>
+              <option>Eastern Province - Jubail</option>
+              <option>Eastern Province - Dammam</option>
+              <option>Eastern Province - Khobar</option>
+            </select>
+          </div>
+          <div>
+            <label for="filter-status">Filter by status</label>
+            <select id="filter-status">
+              <option>All statuses</option>
+              <option>Under Investigation</option>
+              <option>Assigned</option>
+              <option>Awaiting Evidence</option>
+              <option>Recovered</option>
+              <option>Flagged - Closed</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>Report ID</th>
+              <th>Device</th>
+              <th>Region</th>
+              <th>Reporter</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td class="serial">#TR-1042</td>
+              <td>iPhone 13 Pro</td>
+              <td>Jubail</td>
+              <td>M. Alsaihati</td>
+              <td><span class="status flagged">Under Investigation</span></td>
+              <td><a class="button small" href="#">Open</a></td>
+            </tr>
+            <tr>
+              <td class="serial">#TR-1039</td>
+              <td>Dell XPS 15</td>
+              <td>Dammam</td>
+              <td>F. Alghamdi</td>
+              <td><span class="status flagged">Assigned</span></td>
+              <td><a class="button small" href="#">Open</a></td>
+            </tr>
+            <tr>
+              <td class="serial">#TR-1031</td>
+              <td>Samsung S23</td>
+              <td>Khobar</td>
+              <td>H. Alswilim</td>
+              <td><span class="status flagged">Awaiting Evidence</span></td>
+              <td><a class="button small" href="#">Open</a></td>
+            </tr>
+            <tr>
+              <td class="serial">#TR-0917</td>
+              <td>Galaxy Tab A9</td>
+              <td>Jubail</td>
+              <td>A. AlMubarak</td>
+              <td><span class="status clear">Recovered</span></td>
+              <td><a class="button small light" href="#">View</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Device blacklist -->
+      <div class="card">
+        <h2>Device Blacklist</h2>
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>Serial</th>
+              <th>Device</th>
+              <th>Owner</th>
+              <th>Last Report</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td class="serial">356789104523871</td>
+              <td>iPhone 13 Pro</td>
+              <td>Demo Owner</td>
+              <td class="serial">#TR-1042</td>
+              <td><span class="status stolen">Stolen</span></td>
+            </tr>
+            <tr>
+              <td class="serial">R58N91TQ2LM</td>
+              <td>Galaxy Tab S8</td>
+              <td>Demo Owner</td>
+              <td class="serial">#TR-1057</td>
+              <td><span class="status flagged">Flagged</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 CheckSerialNum.</span>
+      <span>Case Officer Dashboard</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

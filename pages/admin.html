@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckSerialNum - Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="frame">
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <a class="logo" href="../index.html">CheckSerialNum <span class="grey-text">| Admin</span></a>
+      <div class="menu">
+        <a href="officer.html">Case Queue</a>
+        <a class="active" href="admin.html">Admin</a>
+        <a href="signin.html">Sign Out</a>
+      </div>
+    </nav>
+
+    <!-- Page title and numbers -->
+    <header class="hero">
+      <h1>Platform overview <span class="grey-text">and user accounts.</span></h1>
+      <p>Manage users, roles and staff invitations.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="number">8</div>
+          <div class="label">Users</div>
+        </div>
+        <div class="stat">
+          <div class="number">4</div>
+          <div class="label">Registered Devices</div>
+        </div>
+        <div class="stat">
+          <div class="number red">0</div>
+          <div class="label">Locked Accounts</div>
+        </div>
+        <div class="stat">
+          <div class="number">25</div>
+          <div class="label">Lookups (24 h)</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- Users table -->
+      <div class="card">
+        <h2>Users</h2>
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>Demo Owner</td>
+              <td class="serial">0500000001</td>
+              <td>Device owner</td>
+              <td><span class="status clear">Active</span></td>
+              <td><a class="button small" href="#">Edit</a></td>
+            </tr>
+            <tr>
+              <td>Test Shopper</td>
+              <td class="serial">0551234567</td>
+              <td>Shop owner</td>
+              <td><span class="status clear">Active</span></td>
+              <td><a class="button small" href="#">Edit</a></td>
+            </tr>
+            <tr>
+              <td>Demo Officer</td>
+              <td class="serial">0500000008</td>
+              <td>Case officer</td>
+              <td><span class="status clear">Active</span></td>
+              <td><a class="button small" href="#">Edit</a></td>
+            </tr>
+            <tr>
+              <td>Demo Admin</td>
+              <td class="serial">0500000009</td>
+              <td>Admin</td>
+              <td><span class="status clear">Active</span></td>
+              <td class="grey-text">you</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="two-columns">
+
+        <!-- Invite a staff member -->
+        <div class="card">
+          <h2>Invite a Case Officer or Admin</h2>
+          <p class="hint">Creates a sign-up link that works once and expires after 48 hours.</p>
+          <form action="#">
+            <label for="invite-role">Role</label>
+            <select id="invite-role" name="role">
+              <option>Case officer</option>
+              <option>Admin</option>
+            </select>
+
+            <label for="invite-label">Who is it for? (optional)</label>
+            <input type="text" id="invite-label" name="label" placeholder="e.g. Riyadh region officer">
+
+            <button class="button" type="submit">Create Invite Link</button>
+          </form>
+        </div>
+
+        <!-- (sample data) -->
+        <div class="card">
+          <h2>Recent Admin Activity</h2>
+          <div class="table-box">
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Change</th>
+                <th>By</th>
+              </tr>
+              <tr>
+                <td class="serial">28 Oct 00:48</td>
+                <td>Invite created: Case officer</td>
+                <td>Demo Admin</td>
+              </tr>
+              <tr>
+                <td class="serial">28 Oct 00:48</td>
+                <td>Jeddah Officer joined through an invite</td>
+                <td>Jeddah Officer</td>
+              </tr>
+              <tr>
+                <td class="serial">28 Oct 02:50</td>
+                <td>Password reset link created</td>
+                <td>Demo Admin</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 CheckSerialNum.</span>
+      <span>Admin Dashboard</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
