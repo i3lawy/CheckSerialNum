@@ -1,7 +1,5 @@
 CREATE DATABASE IF NOT EXISTS checkserialnum_db
 
-USE checkserialnum_db;
-
 -- REGION
 CREATE TABLE IF NOT EXISTS `REGION` (
     `region_id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -13,12 +11,12 @@ CREATE TABLE IF NOT EXISTS `REGION` (
 CREATE TABLE IF NOT EXISTS `USER` (
     `user_id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     `full_name` VARCHAR(150) NOT NULL,
-    `national_id` CHAR(64) NOT NULL UNIQUE,           -- HMAC-SHA256 of the National ID / Iqama
+    `national_id` CHAR(64) NOT NULL UNIQUE,
     `mobile_number` VARCHAR(20) NOT NULL UNIQUE,
     `password_hash` VARCHAR(255) NOT NULL,
     `preferred_language` ENUM('Arabic', 'English') DEFAULT 'English',
     `role` ENUM('registered_user', 'shop_owner', 'case_officer', 'admin') NOT NULL DEFAULT 'registered_user',
-    `cr_document_path` VARCHAR(255) NULL,             -- shop owners: Commercial Registration file in storage/cr/
+    `cr_document_path` VARCHAR(255) NULL,
     `status` ENUM('active', 'suspended', 'locked') DEFAULT 'active',
     `failed_login_attempts` TINYINT UNSIGNED DEFAULT 0,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
